@@ -1,1 +1,36 @@
+VM ware
+
+file > new vm, custom - next > next
+use ISO image - Browse path TrueNAS-13.3-UI.2.iso - next > next
+memory 2gb^ > NAT > Recommended(LSI) > SCSI > create new virtual disk 
+> *Allocate all disk space now *store virtual disk as a single file
+>next > next >finish 
+>yes >yes, space + enter, yes, enter
+set password root - root OK
+Boot via bios - reboot the system, ok (ctrl+alt) > shutdown 
+
+edit vm setting (add 2)
++ add hard disk > scsi > create virtual disk>
+disk size-20GB *allocate all disk space now *store virtual disk as single file
+>next finish > apply and save
+
+run again
+
+LOGIN through ip
+(if required same for webdav)
+STORAGE - pool +add create pool
+nmae: pool *show disk with non unique serial number
+select dd1 --> *force confirm> continue> create> confirm> create pool
+
+SHAIRNG
+
+SERVICES
+
+IN TERMINAL
+
+SHARING
+
+ACCOUNTS
+
+SERVICES
 
