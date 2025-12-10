@@ -1,1 +1,25 @@
+file > new vm, custom - next > next
+use ISO image - Browse path WINDOWS10-64x.iso - next > next
+Set name and password: N:MSIS P:msis@123
+firmware type : BIOS, NO PROCESSORS: 2,2
+memory 8gb^ > NAT > Recommended(LSI) > SCSI > create new virtual disk 
+> disk size 60GB+ *Allocate all disk space now *store virtual disk as a single file
+>next > next >finish 
+>yes >yes, space + enter, yes, enter
+set password root - root OK
+Boot via bios - reboot the system, ok (ctrl+alt) > shutdown 
 
+run again
+
+LOGIN through ip
+(if required same for webdav)
+STORAGE - pool +add create pool
+nmae: pool *show disk with non unique serial number
+select dd1 --> *force confirm> continue> create> confirm> create pool
+
+SHAIRNG - wedav shares -> webdav confioguration 
+name:webdav, path-webdav - submit> confirm> submit> enable service> close
+
+SERVICES - webdav> edit HTTP 8080
+HTTP authentication > no authentication - save
+ access in the browser http://<IP>:8080/webdav
