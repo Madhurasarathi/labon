@@ -22,15 +22,26 @@ STORAGE - pool +add create pool
 nmae: pool *show disk with non unique serial number
 select dd1 --> *force confirm> continue> create> confirm> create pool
 
-SHAIRNG
+SHAIRNG - UNIX NFS, path -pool, *all dir
+advanced options maprort user- root, group- wheel
+submit> enable service> close
 
-SERVICES
+SERVICES- nfs- edit *nfs4
+other- allow non root mount- save
 
-IN TERMINAL
+IN TERMINAL- cd /mnt/
+sudo mkdir nfs
+sudo mount -t nfs -o nfsvers=4 <IP>:/mnt/pool /mnt/nfs/
 
-SHARING
+SHARING - windows shares[SMB], ADD+ /mnt/pool(path)
+advanvced options- *allow guest access- submit, enable service, close
 
-ACCOUNTS
+ACCOUNTS - users> add> n:winduser, username:winduser, P:root, root
+*home directory permission [to all]
 
-SERVICES
-
+SERVICES- SMB edit *enable SMB1 support1
+advanced options> guest account -> winduser >save
+ 
+GOTO WINDOWS VM> network right click-> map network device
+folder(\\\<IP>\pool *connect using credentials
+username:winduser, p:root
